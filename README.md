@@ -1,8 +1,9 @@
 ## Portfolio Site
 
-This is a personal portfolio website, made using Next.js.
+This is a personal portfolio website, made using Next.js, react-three-fiber.
 To run this on localhost type `npm start` and when u are done coding type `npm run dev` to build your app.
 
+dev-env : node v13.14.0
 
 ## Contributing
 

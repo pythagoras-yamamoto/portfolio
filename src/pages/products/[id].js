@@ -40,10 +40,10 @@ const Product = (props) => (
           <motion.img
             key={props.product.image}
             src={props.product.image}
-            animate={{ x: 0, opacity: 1 }}
-            initial={{ x: 200, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            initial={{ y: 200, opacity: 0 }}
             exit={{ opacity: 0 }}
-            transition={{ delay: 0.2 }}
+            transition={{ delay: 0.3 }}
           />
         </motion.div>
 

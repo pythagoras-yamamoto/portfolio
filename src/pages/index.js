@@ -2,25 +2,9 @@ import Link from 'next/link';
 import fetch from 'isomorphic-unfetch';
 import { motion } from 'framer-motion';
 
-// Our custom easing
-let easing = [0.6, -0.05, 0.01, 0.99];
-
-// Custom variant
-const fadeIn = {
-  initial: {
-    x: 300,
-    opacity: 0,
-    transition: { duration: 0.8, ease: easing }
-  },
-  animate: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.8,
-      ease: easing
-    }
-  }
-};
+import { ThreeAnimation } from '../libs/3D/ThreeAnimation';
+import { fadeIn } from '../libs/motion/fadeIn';
+import { fadeOut } from '../libs/motion/fadeOut';
 
 const stagger = {
   animate: {
@@ -41,7 +25,12 @@ const Index = (props) => (
     </motion.div>
     <div className="container">
       <motion.div variants={stagger} className="product-row">
-        <motion.div animate={{ y: 0, opacity: 1 }} initial={{ y: 20, opacity: 0 }} transition={{delay: 0.2 }} className="hoge">
+        <motion.div
+          animate={{ y: 0, opacity: 1 }}
+          initial={{ y: 20, opacity: 0 }}
+          transition={{ delay: 0.2 }}
+          className="hoge"
+        >
           <h1 typing-demo>Creating Desital Product.</h1>
           <p>
             ソフトウェアエンジニア、山本雄大のポートフォリオサイトです。
@@ -49,7 +38,76 @@ const Index = (props) => (
             主にデジタルプロダクトの企画、制作、開発を行っています。
           </p>
         </motion.div>
-        {props.products.map((product) => (
+        <div className="row">
+          <Link href="/products/ghost-whey-vegan">
+            <motion.div
+              className="fuga"
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -50, opacity: 0 }}
+              transition={{ duration: 0.3, delay: 0.5 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <ThreeAnimation />
+            </motion.div>
+          </Link>
+          <Link href="/products/ghost-whey-vegan">
+            <motion.div
+              className="fuga"
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -50, opacity: 0 }}
+              transition={{ duration: 0.3, delay: 0.5 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <ThreeAnimation />
+            </motion.div>
+          </Link>
+          <Link href="/products/1">
+            <motion.div
+              className="fuga"
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -50, opacity: 0 }}
+              transition={{ duration: 0.3, delay: 0.5 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <ThreeAnimation />
+            </motion.div>
+          </Link>
+          <Link href="/products/1">
+            <motion.div
+              className="fuga"
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -50, opacity: 0 }}
+              transition={{ duration: 0.3, delay: 0.5 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <ThreeAnimation />
+            </motion.div>
+          </Link>
+          <Link href="/products/1">
+            <motion.div
+              className="fuga"
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -50, opacity: 0 }}
+              transition={{ duration: 0.3, delay: 0.5 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <ThreeAnimation />
+            </motion.div>
+          </Link>
+        </div>
+      </motion.div>
+    </div>
+    {/* {props.products.map((product) => (
           <Link
             key={product.id}
             href="/products/[id]"
@@ -80,9 +138,7 @@ const Index = (props) => (
               </div>
             </motion.div>
           </Link>
-        ))}
-      </motion.div>
-    </div>
+        ))} */}
     <motion.div
       animate={{ opacity: 1 }}
       initial={{ opacity: 0 }}
