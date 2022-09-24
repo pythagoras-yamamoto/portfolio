@@ -24,8 +24,8 @@ export const ThreeAnimation = () => {
   const idxMiddle = (icons.length - 1) / 2;
 
   return (
-    <Canvas colorManagement={false} camera={{ position: [0, 1, 5] }}>
-      <ambientLight intensity={[0.3]} />
+    <Canvas colorManagement={false} camera={{ position: [0, 0.1, 3] }}>
+      <ambientLight intensity={[0.5]} />
       <pointLight position={[1, 1, 1]} />
       <AnimatedIcon key={1} path={mdiSpotify} color="#1A202C" invert={true} />
       {/* {icons.map((props, i) => ( */}
@@ -82,7 +82,7 @@ export const Turntable = (props) => {
 };
 
 // Float up and down
-export const Float = ({ speed = 1, amplitude = 0.2, ...props }) => {
+export const Float = ({ speed = 1, amplitude = 0, ...props }) => {
   const ref = useRef();
   useFrame(
     ({ clock }) =>
