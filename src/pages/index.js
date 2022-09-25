@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import fetch from 'isomorphic-unfetch';
-import { motion, useScroll, useSpring } from "framer-motion";
+import { motion, useScroll, useSpring } from 'framer-motion';
 import { ThreeAnimation } from '../libs/3D/ThreeAnimation';
+// import { ScrollBar } from '../libs/GSAP/ScrollBar';
 import { fadeIn } from '../libs/motion/fadeIn';
 import { fadeOut } from '../libs/motion/fadeOut';
 
@@ -13,27 +14,20 @@ const stagger = {
   }
 };
 
-const { scrollYProgress } = useScroll();
-const scaleX = useSpring(scrollYProgress, {
-  stiffness: 100,
-  damping: 30,
-  restDelta: 0.001
-});
-
 const Index = (props) => (
   <motion.div
     initial="initial"
     animate="animate"
     exit={{ opacity: 0 }}
-    className="flex justify-center w-screen"
+    className="w-screen"
   >
     <motion.div
       animate={{ opacity: 1 }}
       initial={{ opacity: 0 }}
-      className="flex justify-center w-screen pt-6 fixed z-50"
+      className="flex justify-center w-screen pt-6"
     >
       <div class="flex justify-between w-4/5">
-        <h1 class="font-bold text-xl">Yudai Yamamoto</h1>
+        <h1 class="font-bold text-2xl">Yudai Yamamoto</h1>
         <div class="flex items-center gap-4">
           <div class="relative">
             <label class="sr-only" for="search">
@@ -83,10 +77,10 @@ const Index = (props) => (
         </div>
       </div>
     </motion.div>
-    <div className="h-screen w-4/5 my-auto mb-8">
+    <div className="flex justify-center h-screen my-auto mb-8">
       <motion.div
         variants={stagger}
-        className="flex justify-start items-center h-4/5 overflow-y-hidden scrollbar-hide"
+        className="flex justify-start items-center w-4/5 h-4/5 overflow-y-hidden scrollbar-hide"
       >
         <motion.div
           animate={{ y: 0, opacity: 1 }}
@@ -101,49 +95,10 @@ const Index = (props) => (
           </p>
           <div class="flex justify-start h-20">
             <ThreeAnimation />
-            {/* <Link href="/products/ghost-whey-vegan">
-              <motion.div
-                className="fuga"
-                initial={{ y: 50, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: -50, opacity: 0 }}
-                transition={{ duration: 0.3, delay: 0.5 }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <ThreeAnimation />
-              </motion.div>
-            </Link>
-            <Link href="/products/ghost-whey-vegan">
-              <motion.div
-                className="fuga"
-                initial={{ y: 50, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: -50, opacity: 0 }}
-                transition={{ duration: 0.3, delay: 0.5 }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <ThreeAnimation />
-              </motion.div>
-            </Link>
-            <Link href="/products/ghost-whey-vegan">
-              <motion.div
-                className="fuga"
-                initial={{ y: 50, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: -50, opacity: 0 }}
-                transition={{ duration: 0.3, delay: 0.5 }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <ThreeAnimation />
-              </motion.div>
-            </Link> */}
           </div>
         </motion.div>
-        <div className="row flex flex-1 h-48 w-48">
-          <a href="#" class="relative block bg-black group mr-3">
+        <div className="row flex flex-1 h-52 w-">
+          <a href="/products/ghost-whey-vegan" class="relative block bg-black group mr-3">
             <img
               alt="Developer"
               src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
@@ -165,7 +120,7 @@ const Index = (props) => (
               </div>
             </div>
           </a>
-          <a href="#" class="relative block bg-black group mr-4">
+          <a href="/products/ghost-whey-vegan" class="relative block bg-black group mr-4">
             <img
               alt="Developer"
               src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
@@ -188,7 +143,7 @@ const Index = (props) => (
               </div>
             </div>
           </a>
-          <a href="#" class="relative block bg-black group mr-4">
+          <a href="/products/ghost-whey-vegan" class="relative block bg-black group mr-4">
             <img
               alt="Developer"
               src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
@@ -273,17 +228,17 @@ const Index = (props) => (
     <motion.div
       animate={{ opacity: 1 }}
       initial={{ opacity: 0 }}
-      className="w-full fixed bottom-0 py-6"
+      className="w-full fixed bottom-0 pt-6 pb-2"
     >
-      <div class="flex justify-center pb-6">
+      <div class="flex justify-center pb-4">
         <h2 class="sr-only">Steps</h2>
         <div class="w-4/5">
           <div class="overflow-hidden bg-gray-200 rounded-full">
             <div class="w-1/2 h-2 bg-blue-500 rounded-full"></div>
           </div>
-          <ol class="mt-4 text-sm font-medium text-gray-500 grid grid-cols-3">
+          <ol class="mt-3 text-sm font-medium text-gray-500 grid grid-cols-3">
             <li class="flex items-center justify-start text-blue-600">
-              <span class="hidden sm:inline"> Details </span>
+              <span class="hidden sm:inline"> 0% </span>
 
               <svg
                 class="w-6 h-6 sm:w-5 sm:h-5 sm:ml-2"
@@ -302,7 +257,7 @@ const Index = (props) => (
             </li>
 
             <li class="flex items-center justify-center text-blue-600">
-              <span class="hidden sm:inline"> Address </span>
+              <span class="hidden sm:inline"> 50% </span>
 
               <svg
                 class="w-6 h-6 sm:w-5 sm:h-5 sm:ml-2"
@@ -326,7 +281,7 @@ const Index = (props) => (
             </li>
 
             <li class="flex items-center justify-end">
-              <span class="hidden sm:inline"> Payment </span>
+              <span class="hidden sm:inline"> 100% </span>
 
               <svg
                 class="w-6 h-6 sm:w-5 sm:h-5 sm:ml-2"
@@ -347,6 +302,27 @@ const Index = (props) => (
         </div>
       </div>
       <div class="flex justify-center pb-8 space-x-4">
+        <Link href="/download">
+          <a class="inline-block p-3 text-white bg-indigo-600 border border-indigo-600 rounded-full hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring">
+            <span class="sr-only"> Download </span>
+
+            <svg
+              class="w-5 h-5"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+          </a>
+        </Link>
+        <Link href="/download">
           <a
             class="inline-block p-3 text-white bg-indigo-600 border border-indigo-600 rounded-full hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring"
             href="/download"
@@ -368,72 +344,27 @@ const Index = (props) => (
               />
             </svg>
           </a>
-        <a
-          class="inline-block p-3 text-white bg-indigo-600 border border-indigo-600 rounded-full hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring"
-          href="/download"
-        >
-          <span class="sr-only"> Download </span>
-
-          <svg
-            class="w-5 h-5"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M14 5l7 7m0 0l-7 7m7-7H3"
-            />
-          </svg>
-        </a>
-        <a
-          class="inline-block p-3 text-white bg-indigo-600 border border-indigo-600 rounded-full hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring"
-          href="/download"
-        >
-          <span class="sr-only"> Download </span>
-
-          <svg
-            class="w-5 h-5"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M14 5l7 7m0 0l-7 7m7-7H3"
-            />
-          </svg>
-        </a>
-        <a
-          class="inline-block p-3 text-white bg-indigo-600 border border-indigo-600 rounded-full hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring"
-          href="/download"
-        >
-          <span class="sr-only"> Download </span>
-
-          <svg
-            class="w-5 h-5"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M14 5l7 7m0 0l-7 7m7-7H3"
-            />
-          </svg>
-        </a>
+        </Link>
+        <Link href="/download">
+          <a class="inline-block p-3 text-white bg-indigo-600 border border-indigo-600 rounded-full hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring">
+            <span class="sr-only"> Download </span>
+            <svg
+              class="w-5 h-5"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+          </a>
+        </Link>
       </div>
-      <motion.div className="progress-bar" style={{ scaleX }} />
-      {/* <span>&copy; {new Date().getFullYear()} Yudai Yamamoto. All Rights.</span> */}
     </motion.div>
   </motion.div>
 );
