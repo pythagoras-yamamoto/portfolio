@@ -5,6 +5,7 @@ To run this on localhost type `npm start` and when u are done coding type `npm r
 
 dev-env : node v13.14.0 → 14.15.1
 
+<!--
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributiors who wants to make this website better can make contribution,which will be **greatly appreciated**.
@@ -14,3 +15,4 @@ Contributions are what make the open source community such an amazing place to b
 3. Commit your Changes (`git commit -m 'Added some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+-->
