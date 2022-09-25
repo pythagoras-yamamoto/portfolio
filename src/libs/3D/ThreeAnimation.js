@@ -24,13 +24,13 @@ export const ThreeAnimation = () => {
   const idxMiddle = (icons.length - 1) / 2;
 
   return (
-    <Canvas colorManagement={false} camera={{ position: [0, 0.1, 3] }}>
+    <Canvas colorManagement={false} camera={{ position: [0, 1, 5] }}>
       <ambientLight intensity={[0.5]} />
       <pointLight position={[1, 1, 1]} />
-      <AnimatedIcon key={1} path={mdiSpotify} color="#1A202C" invert={true} />
-      {/* {icons.map((props, i) => ( */}
-      {/* <AnimatedIcon key={i} {...props} position-x={(i - idxMiddle) * 2} /> */}
-      {/* ))} */}
+      {/* <AnimatedIcon key={1} path={mdiSpotify} color="#1A202C" invert={true} /> */}
+      {icons.map((props, i) => (
+        <AnimatedIcon key={i} {...props} position-x={(i - idxMiddle) * 3} />
+      ))}
       <ContactShadows
         rotation-x={Math.PI / 2}
         position={[0, 1.5, 2]}

@@ -17,6 +17,7 @@
     "@types/styled-components": "^5.1.26",
     "@zeit/next-sass": "^1.0.1",
     "framer-motion": "^1.7.0",
+    "gsap": "^3.11.1",
     "isomorphic-unfetch": "^3.0.0",
     "next": "^9.1.6",
     "node-sass": "^4.13.0",

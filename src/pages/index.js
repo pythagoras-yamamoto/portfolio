@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import fetch from 'isomorphic-unfetch';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useSpring } from "framer-motion";
 import { ThreeAnimation } from '../libs/3D/ThreeAnimation';
 import { fadeIn } from '../libs/motion/fadeIn';
 import { fadeOut } from '../libs/motion/fadeOut';
@@ -12,6 +12,13 @@ const stagger = {
     }
   }
 };
+
+const { scrollYProgress } = useScroll();
+const scaleX = useSpring(scrollYProgress, {
+  stiffness: 100,
+  damping: 30,
+  restDelta: 0.001
+});
 
 const Index = (props) => (
   <motion.div
@@ -92,8 +99,9 @@ const Index = (props) => (
             ソフトウェアエンジニア、山本雄大のポートフォリオサイトです。
             主にデジタルプロダクトの企画、制作、開発を行っています。
           </p>
-          <div class="flex flex-1">
-            <Link href="/products/ghost-whey-vegan">
+          <div class="flex justify-start h-20">
+            <ThreeAnimation />
+            {/* <Link href="/products/ghost-whey-vegan">
               <motion.div
                 className="fuga"
                 initial={{ y: 50, opacity: 0 }}
@@ -131,7 +139,7 @@ const Index = (props) => (
               >
                 <ThreeAnimation />
               </motion.div>
-            </Link>
+            </Link> */}
           </div>
         </motion.div>
         <div className="row flex flex-1 h-48 w-48">
@@ -424,6 +432,7 @@ const Index = (props) => (
           </svg>
         </a>
       </div>
+      <motion.div className="progress-bar" style={{ scaleX }} />
       {/* <span>&copy; {new Date().getFullYear()} Yudai Yamamoto. All Rights.</span> */}
     </motion.div>
   </motion.div>
