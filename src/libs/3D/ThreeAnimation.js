@@ -1,5 +1,4 @@
 import React, { useRef, useState, useEffect } from 'react';
-import Link from 'next/link';
 import { Canvas, useFrame, useThree } from 'react-three-fiber';
 import { OrbitControls, ContactShadows, Sphere } from '@react-three/drei';
 import { a, useSpring } from '@react-spring/three';
