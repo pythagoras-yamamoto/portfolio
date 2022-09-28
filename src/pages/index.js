@@ -31,8 +31,7 @@ const Index = (props) => (
         <div class="flex items-center gap-4">
           <div class="relative">
             <label class="sr-only" for="search">
-              {' '}
-              Search{' '}
+              Search
             </label>
 
             <input
@@ -88,27 +87,28 @@ const Index = (props) => (
           transition={{ delay: 0.2 }}
           className="hoge flex flex-column justify-center items-start pr-20 w-32"
         >
-          <h1 class="text-xl font-bold pb-3">Creating Desital Product.</h1>
+          <h1 class="text-2xl font-bold pb-3">Creating Desital Product.</h1>
           <p class="text-xs">
+            {/* This is the portfolio site of Yudai Yamamoto, software engineer. I mainly plan and develop digital products. */}
             ソフトウェアエンジニア、山本雄大のポートフォリオサイトです。
-            主にデジタルプロダクトの企画、制作、開発を行っています。
+            デジタルプロダクトの企画、開発を行っています。
           </p>
           <div class="flex justify-start h-20">
             <ThreeAnimation />
           </div>
         </motion.div>
-        <div className="row flex flex-1 h-52 w-">
-          <a href="/products/ghost-whey-vegan" class="relative block bg-black group mr-3">
+        <div className="row flex flex-1 h-52">
+          <a href="/products/ghost-whey-vegan" class="w-52 h-52 relative block bg-black rounded-xl group mr-3">
             <img
               alt="Developer"
               src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
-              class="absolute inset-0 object-cover w-full h-full transition-opacity opacity-75 group-hover:opacity-50"
+              class="absolute inset-0 object-cover w-full h-full transition-opacity group-hover:opacity-50 rounded-2xl "
             />
-            <div class="relative p-8 h-1/2">
+            <div class="relative p-8 transition-all transform translate-y-8 opacity-0 group-hover:opacity-100 group-hover:translate-y-0">
               <p class="text-sm font-medium tracking-widest text-pink-500 uppercase">
-                Developer
+                Website
               </p>
-              <p class="text-2xl font-bold text-white">Tony Wayne</p>
+              <p class="text-base font-bold text-white">「PADAYON」General Incorporated Association</p>
               <div class="mt-64">
                 <div class="transition-all transform translate-y-8 opacity-0 group-hover:opacity-100 group-hover:translate-y-0">
                   <p class="text-sm text-white">
@@ -131,7 +131,7 @@ const Index = (props) => (
               <p class="text-sm font-medium tracking-widest text-pink-500 uppercase">
                 Developer
               </p>
-              <p class="text-2xl font-bold text-white">Tony Wayne</p>
+              <p class="text-base font-bold text-white"> 「Meme」Relaxation Salon</p>
               <div class="mt-64">
                 <div class="transition-all transform translate-y-8 opacity-0 group-hover:opacity-100 group-hover:translate-y-0">
                   <p class="text-sm text-white">
@@ -234,7 +234,7 @@ const Index = (props) => (
         <h2 class="sr-only">Steps</h2>
         <div class="w-4/5">
           <div class="overflow-hidden bg-gray-200 rounded-full">
-            <div class="w-1/2 h-2 bg-blue-500 rounded-full"></div>
+            <div class="w-1/2 h-1 bg-blue-500 rounded-full"></div>
           </div>
           <ol class="mt-3 text-sm font-medium text-gray-500 grid grid-cols-3">
             <li class="flex items-center justify-start text-blue-600">
@@ -302,7 +302,7 @@ const Index = (props) => (
         </div>
       </div>
       <div class="flex justify-center pb-8 space-x-4">
-        <Link href="/download">
+        <Link class="rounded-md" href="/about">
           <a class="inline-block p-3 text-white bg-indigo-600 border border-indigo-600 rounded-full hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring">
             <span class="sr-only"> Download </span>
 
