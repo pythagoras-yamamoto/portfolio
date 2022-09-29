@@ -2,6 +2,7 @@ import fetch from 'isomorphic-unfetch';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
+import { Nav } from '../components/common/index';
 import { RightArea, LeftArea } from '../components/about/index';
 
 const Product = (props) => (
@@ -25,6 +26,7 @@ const Product = (props) => (
         <RightArea />
       </div>
     </div>
+    <Nav />
   </motion.div>
 );
 

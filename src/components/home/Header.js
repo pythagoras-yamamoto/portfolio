@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export const Header = () => {
   return (
-    <div class="flex justify-center z-50 fixed top-0 w-full py-4">
+    <div class="flex justify-center z-50 fixed top-0 w-full py-6">
       <div class="flex justify-between w-2/3">
         <h1 class="font-bold text-2xl">Yudai Yamamoto</h1>
         <div class="flex items-center gap-4">

@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 import { mdiReact, mdiGithub, mdiSpotify, mdiApple, mdiGit } from '@mdi/js';
 
 import Icon3D from './Icon3D';
-import { fadeIn } from '../motion/fadeIn';
+import { fadeIn } from '../motion/fade';
 
 // You can use any icon from @mdi/js:
 const icons = [
