@@ -10,24 +10,26 @@ import { stagger, fadeSide } from '../libs/motion/fade';
 const Index = (props) => (
   <motion.div initial="initial" animate="animate">
     <Header />
-    <div className="flex justify-center h-screen my-auto mb-8">
+    <div className="flex flex-col justify-center h-screen">
       <motion.div
         variants={fadeSide}
-        className="flex justify-start items-center w-full h-full overflow-y-hidden scrollbar-hide"
+        className="flex justify-start items-center w-full overflow-y-hidden scrollbar-hide"
       >
         <div className="pl-32">
           <Profile />
         </div>
-        <div className="row flex flex-1">
+        <div className="flex flex-1">
           <Card />
           <Card />
           <Card />
           <Card />
         </div>
       </motion.div>
-      <ScrollBar />
+      <div className=' w-full pt-8'>
+        <ScrollBar />
+      </div>
     </div>
-    <div w-full fixed bottom-0 pt-6 pb-2>
+    <div w-full h-32 fixed bottom-0 pt-6 pb-2>
       <Nav />
     </div>
   </motion.div>

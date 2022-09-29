@@ -1,9 +1,9 @@
 export const ScrollBar = () => {
   return (
     <>
-      <div class="flex justify-center pb-4">
+      <div class="flex justify-center">
         <h2 class="sr-only">Steps</h2>
-        <div class="w-4/5">
+        <div class="w-2/3">
           <div class="overflow-hidden bg-gray-200 rounded-full">
             <div class="w-1/2 h-1 bg-blue-500 rounded-full"></div>
           </div>
