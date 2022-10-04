@@ -1,0 +1,89 @@
+import { defaultSEO, extendSEO } from './seo'
+
+export const routes = {
+  home: {
+    label: 'Home',
+    path: '/',
+    seo: defaultSEO,
+  },
+  about: {
+    label: 'About',
+    path: '/about',
+    seo: extendSEO({
+      title: 'About',
+      url: 'about',
+    }),
+  },
+  products: {
+    label: 'Writing',
+    path: '/writing',
+    seo: extendSEO({
+      title: 'Writing',
+      description: 'Thinking out loud about software design and development.',
+      image: 'og/writing.png',
+      url: 'writing',
+    }),
+  },
+  media: {
+    label: 'HN',
+    path: '/hn',
+    seo: extendSEO({
+      title: 'HN',
+      description: 'A better Hacker News.',
+      image: 'og/hn.png',
+      url: 'hn',
+    }),
+  },
+
+  // 
+  appDissection: {
+    label: 'App Dissection',
+    path: '/app-dissection',
+    seo: extendSEO({
+      title: 'App Dissection',
+      description: 'In-depth design explorations.',
+      image: 'og/app-dissection.png',
+      url: 'app-dissection',
+    }),
+  },
+  ama: {
+    label: 'AMA',
+    path: '/ama',
+    seo: extendSEO({
+      title: 'AMA',
+      description: 'Ask me anything.',
+      image: 'og/ama.png',
+      url: 'ama',
+    }),
+  },
+  security: {
+    label: 'Security Checklist',
+    path: '/security',
+    seo: extendSEO({
+      title: 'Security Checklist',
+      description: 'Staying safe on the internet.',
+      image: 'og/security.png',
+      url: 'security',
+    }),
+  },
+  stack: {
+    label: 'Stack',
+    path: '/stack',
+    seo: extendSEO({
+      title: 'Stack',
+      description: 'My favorite tools and software.',
+      image: 'og/stack.png',
+      url: 'stack',
+    }),
+  },
+  settings: {
+    label: 'Settings',
+    path: '/settings',
+    seo: extendSEO({
+      title: 'Settings',
+      description: 'Manage your profile.',
+      image: 'og/settings.png',
+      url: 'settings',
+    }),
+  },
+}

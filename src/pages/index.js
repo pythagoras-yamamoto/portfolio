@@ -6,9 +6,12 @@ import { Scroll } from '@react-three/drei';
 import { Nav } from '../components/common/index';
 import { ScrollBar, Header, Profile, Card } from '../components/home/index';
 import { stagger, fadeSide } from '../libs/motion/fade';
+import { DetectLocation } from '../components/common/Nav';
+// import { ProgressBar } from '../hooks/ProgressBar';
 
 const Index = (props) => (
   <motion.div initial="initial" animate="animate">
+    {/* <ProgressBar /> */}
     <Header />
     <div className="flex flex-col justify-center h-screen">
       <motion.div
@@ -17,6 +20,7 @@ const Index = (props) => (
       >
         <div className="pl-32">
           <Profile />
+          {/* <DetectLocation /> */}
         </div>
         <div className="flex flex-1">
           <Card />
@@ -25,7 +29,7 @@ const Index = (props) => (
           <Card />
         </div>
       </motion.div>
-      <div className=' w-full pt-8'>
+      <div className=" w-full pt-5">
         <ScrollBar />
       </div>
     </div>

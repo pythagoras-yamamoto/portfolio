@@ -50,7 +50,7 @@ export const RightArea = () => {
           </motion.h1>
           <motion.p className="text-sm pb-16" variants={fadeInUp}>
             新潟県出身。最寄りのコンビニは車で10分、冬は積雪が3メートルという陸の孤島、辺境の地で生まれる。
-            高校で数理科学に興味を持ち、大学では数学を学ぶが、なんかコレじゃないと感じ大学院で情報科学に転向。
+            高校で物理学に興味を持ち、大学では数学を学ぶが、なんかコレじゃないと感じ大学院で情報科学に転向。
             技術力を糧に面白おかしく生きるエンジニアの生き方や価値観に憧れソフトウェアエンジニアに。
           </motion.p>
           <motion.div className="text-sm pb-16" variants={fadeInUp}>

@@ -1,8 +1,7 @@
 import React from "react";
 import App from "next/app";
 import { AnimatePresence } from "framer-motion";
-import "../../styles.scss";
-
+import '../../styles.scss'
 
 
 class MyApp extends App {

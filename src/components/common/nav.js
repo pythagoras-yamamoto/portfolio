@@ -1,68 +1,75 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import {
+  FiHome,
+  FiUser,
+  FiSettings,
+  FiFileText,
+  FiActivity
+} from 'react-icons/fi';
+
+// const [count, setCount] = useState(0);
+
+// Similar to componentDidMount and componentDidUpdate:
+// useEffect(() => {
+//   // Update the document title using the browser API
+//   document.title = `You clicked ${count} times`;
+// });
+
+
+export const DetectLocation = (props) => {
+  const router = useRouter();
+  const onClick = () => {
+    alert(typeof(router.pathname));
+    alert(router.pathname);
+  };
+  return <button onClick={onClick}>show location</button>;
+};
+
+let defaultButtonColor = 'white';
+
+export const judgeButtonColor = ({ buttonName }) => {
+  let buttonColor = defaultButtonColor;
+
+  if (buttonName == DetectLocation()) {
+    buttonColor = 'border-indigo-600';
+  }
+
+  return buttonColor;
+};
 
 export const Nav = () => {
   return (
     <div class="fixed flex justify-center w-full bottom-0 z-50 py-6">
       <div class="flex justify-center space-x-4">
-        <Link class="" href="/about">
-          <a class="inline-block p-3 text-white bg-indigo-600 border border-indigo-600 rounded-full hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring">
-            <span class="sr-only"> Download </span>
-            <svg
-              class="w-5 h-5"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M14 5l7 7m0 0l-7 7m7-7H3"
-              />
-            </svg>
+        <Link href="/">
+          <a class="inline-block p-3 text-white bg-indigo-600 border-2 border-indigo-600 rounded-full hover:animate-pulse focus:outline-none focus:ring hover:animate-bounce">
+            <FiHome size={28}/>
           </a>
         </Link>
-        <Link href="/download">
-          <a
-            class="inline-block p-3 text-white bg-indigo-600 border border-indigo-600 rounded-full hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring"
-            href="/download"
-          >
-            <span class="sr-only"> Download </span>
 
-            <svg
-              class="w-5 h-5"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M14 5l7 7m0 0l-7 7m7-7H3"
-              />
-            </svg>
+        <Link href="/about">
+          <a class="inline-block p-3 text-indigo-600 bg-white border-2 border-indigo-600 rounded-full hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring">
+            <span class="sr-only"> Download </span>
+            <FiUser size={28} />
           </a>
         </Link>
-        <Link href="/download">
-          <a class="inline-block p-3 text-white bg-indigo-600 border border-indigo-600 rounded-full hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring">
+        <Link href="/article">
+          <a class="inline-block p-3 text-indigo-600 bg-white border-2 border-indigo-600 rounded-full hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring">
             <span class="sr-only"> Download </span>
-            <svg
-              class="w-5 h-5"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M14 5l7 7m0 0l-7 7m7-7H3"
-              />
-            </svg>
+            <FiFileText size={28} />
+          </a>
+        </Link>
+        <Link href="/data">
+          <a class="inline-block p-3 text-indigo-600 bg-white border-2 border-indigo-600 rounded-full hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring">
+            <span class="sr-only"> Download </span>
+            <FiActivity size={28} />
+          </a>
+        </Link>
+        <Link href="/setting">
+          <a class="inline-block p-3 text-indigo-600 bg-white border-2 border-indigo-600 rounded-full hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring">
+            <span class="sr-only"> Download </span>
+            <FiSettings size={28} />
           </a>
         </Link>
       </div>

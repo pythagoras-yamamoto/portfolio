@@ -4,7 +4,11 @@ export const Header = () => {
   return (
     <div class="flex justify-center z-50 fixed top-0 w-full py-6">
       <div class="flex justify-between w-2/3">
-        <h1 class="font-bold text-2xl">Yudai Yamamoto</h1>
+        <Link href="/">
+          <a>
+            <h1 class="font-bold text-xl">Yudai Yamamoto</h1>
+          </a>
+        </Link>
         <div class="flex items-center gap-4">
           <div class="relative">
             <label class="sr-only" for="search">
@@ -12,7 +16,7 @@ export const Header = () => {
             </label>
 
             <input
-              class="w-full h-10 pl-4 pr-10 text-sm bg-white border-none rounded-full shadow-sm sm:w-56"
+              class="w-full h-10 pl-4 pr-10 text-sm bg-white rounded-full border shadow-sm sm:w-56"
               id="search"
               type="search"
               placeholder="キーワード検索"
@@ -47,7 +51,7 @@ export const Header = () => {
             <img
               alt="Man"
               src="https://storage.googleapis.com/zenn-user-upload/avatar/200c8a7d34.jpeg"
-              class="object-cover w-10 h-10 rounded-full"
+              class="object-cover w-10 h-10 rounded-full border-2 border-slate-900 "
             />
           </a>
         </div>
