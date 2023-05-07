@@ -42,15 +42,15 @@ export const RightArea = () => {
           </motion.h1>
           <motion.p className="text-sm pb-16" variants={fadeInUp}>
             ソフトウェアエンジニア。フロントエンドが主戦場。
-            旅好きで、お気に入りの旅先は台北、宮古島。
+            旅好き。お気に入りの旅先は台北、沖縄。
           </motion.p>
 
           <motion.h1 className="font-bold text-lg pb-2" variants={fadeInUp}>
             今までの経歴
           </motion.h1>
           <motion.p className="text-sm pb-16" variants={fadeInUp}>
-            新潟県出身。最寄りのコンビニは車で10分、冬は積雪が3メートルという陸の孤島、辺境の地で生まれる。
-            高校で物理学に興味を持ち、大学では数学を学ぶが、なんかコレじゃないと感じ大学院で情報科学に転向。
+            新潟県出身。最寄りのコンビニは車で10分、冬は積雪が3メートルという陸の孤島に生まれる。
+            高校で物理学に興味を持ち理系の道に進み、大学では数学を学ぶが、なんかコレじゃないと感じ大学院で情報科学に転向。
             技術力を糧に面白おかしく生きるエンジニアの生き方や価値観に憧れソフトウェアエンジニアに。
           </motion.p>
           <motion.div className="text-sm pb-16" variants={fadeInUp}>
