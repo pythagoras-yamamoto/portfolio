@@ -43,7 +43,7 @@ export const TimeLine = () => {
             サイボウズ株式会社 入社
           </h3>
           <p class="mb-4 text-xs font-normal text-gray-500 dark:text-gray-400">
-            Webエンジニアとして業務アプリ開発ツール「kintone」の開発に従事。
+            Webエンジニアとして業務アプリ開発ツール「kintone」の開発に従事。レガシーコードからReactへの刷新プロジェクトに参画。
           </p>
           <a
             href="https://kintone.cybozu.co.jp/"
